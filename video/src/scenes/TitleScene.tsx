@@ -19,7 +19,7 @@ export const TitleScene: React.FC<{scene: T}> = ({scene}) => {
             {scene.ustBaslik}
           </div>
         ) : null}
-        <div style={{fontSize: theme.size.hero, fontWeight: 900, lineHeight: 1.02, color: theme.colors.text, maxWidth: 1050, ...riseIn(frame, 12, 60)}}>
+        <div style={{fontSize: 116, fontWeight: 900, lineHeight: 1.04, color: theme.colors.text, maxWidth: 1150, whiteSpace: 'pre-line', ...riseIn(frame, 12, 60)}}>
           {scene.baslik}
         </div>
         <div style={{marginTop: 40, height: 10, width: 260 * appear(frame, 22, 24), backgroundColor: theme.colors.accent}} />

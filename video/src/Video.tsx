@@ -18,6 +18,9 @@ import {QuoteScene} from './scenes/QuoteScene';
 import {StatScene} from './scenes/StatScene';
 import {TimelineScene} from './scenes/TimelineScene';
 import {TitleScene} from './scenes/TitleScene';
+import {TwoStatScene} from './scenes/TwoStatScene';
+import {WaterfallScene} from './scenes/WaterfallScene';
+import {ChangeScene} from './scenes/ChangeScene';
 import {theme} from './theme';
 import type {Scene, VideoSpec} from './types';
 
@@ -53,6 +56,12 @@ const SceneBody: React.FC<{scene: Scene}> = ({scene}) => {
       return <QuoteScene scene={scene} />;
     case 'kapanis':
       return <EndScene scene={scene} />;
+    case 'selale':
+      return <WaterfallScene scene={scene} />;
+    case 'degisim':
+      return <ChangeScene scene={scene} />;
+    case 'ikiRakam':
+      return <TwoStatScene scene={scene} />;
   }
 };
 

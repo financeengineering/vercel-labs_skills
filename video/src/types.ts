@@ -74,7 +74,38 @@ export type EndScene = SceneBase & {
   altBaslik?: string;
 };
 
+export type WaterfallScene = SceneBase & {
+  tip: 'selale';
+  baslik: string;
+  birim?: string;
+  ondalik?: number;
+  /** Grafiğin alt sınırı; büyük toplamlarda küçük adımların görünmesi için. Eksende kırık işaretiyle belirtilir. */
+  eksenAlt?: number;
+  baslangic: {etiket: string; deger: number};
+  adimlar: {etiket: string; deger: number}[];
+  bitis: {etiket: string};
+};
+
+export type ChangeScene = SceneBase & {
+  tip: 'degisim';
+  baslik: string;
+  satirlar: {etiket: string; eski: string; yeni: string; etki?: string; not?: string}[];
+};
+
+export type TwoStatScene = SceneBase & {
+  tip: 'ikiRakam';
+  baslik?: string;
+  sol: {etiket: string; deger: number};
+  sag: {etiket: string; deger: number};
+  birim?: string;
+  ondalik?: number;
+  farkEtiketi?: string;
+};
+
 export type Scene =
+  | WaterfallScene
+  | ChangeScene
+  | TwoStatScene
   | TitleScene
   | BulletsScene
   | StatScene
