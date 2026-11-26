@@ -51,8 +51,11 @@ geçişleri uygulanır; altta tüm video boyunca bir ilerleme çubuğu görünü
 
 ## Görünüm
 
-Renkler ve punto boyları `src/theme.ts` içindedir: asfalt zemin, mavi proje
-ızgarası, iş güvenliği sarısı vurgular ve ikaz şeridi. Font, Türkçe karakterleri
+Renkler ve punto boyları `src/theme.ts` içindedir: ESTA Construction kurumsal
+renkleri (altın + siyah), altın tonlu proje ızgarası ve ikaz şeridi. Logo
+dosyaları `public/logo.png` (tam logo) ve `public/logo-kalkan.png` (kalkan
+ikonu); `content.ts` içindeki `logo` alanı verilirse kapakta, kapanışta ve sağ
+üst köşede gösterilir. Font, Türkçe karakterleri
 eksiksiz destekleyen Inter'dir ve `public/fonts` altından yüklenir (SIL OFL).
 
 ## Remotion skill'i

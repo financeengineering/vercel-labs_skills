@@ -15,7 +15,7 @@ export const SceneTitle: React.FC<{children: React.ReactNode; size?: number}> = 
           marginTop: 24,
           height: 8,
           width: 180 * appear(frame, 12, 20),
-          backgroundColor: theme.colors.yellow,
+          backgroundColor: theme.colors.accent,
         }}
       />
     </div>

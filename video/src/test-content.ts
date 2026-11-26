@@ -3,7 +3,8 @@ import type {VideoSpec} from './types';
 // Örnek (uydurma) verilerle tüm sahne tiplerini gösteren test klibi.
 // Buradaki rakamlar gerçek değildir; yalnızca şablonu denemek içindir.
 export const testVideo: VideoSpec = {
-  marka: 'Test Klibi',
+  marka: '',
+  logo: {tam: 'logo.png', ikon: 'logo-kalkan.png'},
   sahneler: [
     {
       tip: 'kapak',

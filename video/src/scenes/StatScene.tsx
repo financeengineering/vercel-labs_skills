@@ -25,7 +25,7 @@ export const StatScene: React.FC<{scene: T}> = ({scene}) => {
           fontSize: 260,
           fontWeight: 900,
           lineHeight: 1,
-          color: theme.colors.yellow,
+          color: theme.colors.accent,
           marginTop: 20,
           fontVariantNumeric: 'tabular-nums',
           ...riseIn(frame, 8, 30),

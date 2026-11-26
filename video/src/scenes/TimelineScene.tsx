@@ -17,7 +17,7 @@ export const TimelineScene: React.FC<{scene: T}> = ({scene}) => {
       <SceneTitle>{scene.baslik}</SceneTitle>
       <div style={{position: 'relative', flex: 1, marginTop: 30}}>
         <div style={{position: 'absolute', top: 40, left: 0, right: 0, height: 6, backgroundColor: theme.colors.panel}} />
-        <div style={{position: 'absolute', top: 40, left: 0, width: `${line * 100}%`, height: 6, backgroundColor: theme.colors.yellow}} />
+        <div style={{position: 'absolute', top: 40, left: 0, width: `${line * 100}%`, height: 6, backgroundColor: theme.colors.accent}} />
         <div style={{display: 'flex', justifyContent: 'space-between'}}>
           {scene.adimlar.map((a, i) => {
             const pos = n === 1 ? 0.5 : i / (n - 1);
@@ -25,9 +25,9 @@ export const TimelineScene: React.FC<{scene: T}> = ({scene}) => {
             const reached = line >= pos - 0.001;
             return (
               <div key={i} style={{width: `${100 / n}%`, display: 'flex', flexDirection: 'column', alignItems: i === 0 ? 'flex-start' : i === n - 1 ? 'flex-end' : 'center', textAlign: i === 0 ? 'left' : i === n - 1 ? 'right' : 'center'}}>
-                <div style={{width: 46, height: 46, marginTop: 20, borderRadius: 23, border: `6px solid ${reached ? theme.colors.yellow : theme.colors.panel}`, backgroundColor: reached ? theme.colors.yellow : theme.colors.bg}} />
+                <div style={{width: 46, height: 46, marginTop: 20, borderRadius: 23, border: `6px solid ${reached ? theme.colors.accent : theme.colors.panel}`, backgroundColor: reached ? theme.colors.accent : theme.colors.bg}} />
                 <div style={{marginTop: 30, ...riseIn(frame, at)}}>
-                  <div style={{fontSize: 30, fontWeight: 800, color: theme.colors.yellow, letterSpacing: 2}}>{a.zaman}</div>
+                  <div style={{fontSize: 30, fontWeight: 800, color: theme.colors.accent, letterSpacing: 2}}>{a.zaman}</div>
                   <div style={{fontSize: 42, fontWeight: 800, color: theme.colors.text, marginTop: 10}}>{a.baslik}</div>
                   {a.aciklama ? <div style={{fontSize: 30, color: theme.colors.muted, marginTop: 10, lineHeight: 1.3, maxWidth: 360}}>{a.aciklama}</div> : null}
                 </div>

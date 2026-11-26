@@ -8,6 +8,7 @@ import {Background} from './components/Background';
 import {Caption} from './components/Caption';
 import {ChapterTag, GlobalOverlay} from './components/Chrome';
 import {fontsLoaded} from './fonts';
+import {LogoContext} from './components/Logo';
 import {BarChartScene} from './scenes/BarChartScene';
 import {BulletsScene} from './scenes/BulletsScene';
 import {CompareScene} from './scenes/CompareScene';
@@ -71,6 +72,7 @@ const waitForFonts = () => {
 export const InfoVideo: React.FC<{spec: VideoSpec}> = ({spec}) => {
   React.useState(waitForFonts);
   return (
+    <LogoContext.Provider value={spec.logo}>
     <AbsoluteFill lang="tr" style={{fontFamily: theme.font, color: theme.colors.text}}>
       <Background />
       <TransitionSeries>
@@ -93,5 +95,6 @@ export const InfoVideo: React.FC<{spec: VideoSpec}> = ({spec}) => {
       </TransitionSeries>
       <GlobalOverlay marka={spec.marka} />
     </AbsoluteFill>
+    </LogoContext.Provider>
   );
 };

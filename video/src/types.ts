@@ -88,5 +88,7 @@ export type Scene =
 export type VideoSpec = {
   /** Sol alt köşede sürekli görünen kısa marka/proje adı. */
   marka?: string;
+  /** public/ altındaki logo dosyaları. Verilirse kapak, kapanış ve köşede gösterilir. */
+  logo?: {tam: string; ikon: string};
   sahneler: Scene[];
 };

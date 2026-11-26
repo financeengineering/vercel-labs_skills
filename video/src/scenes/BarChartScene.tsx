@@ -17,7 +17,7 @@ export const BarChartScene: React.FC<{scene: T}> = ({scene}) => {
         {scene.veriler.map((v, i) => {
           const start = 22 + i * 8;
           const p = interpolate(frame, [start, start + 36], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: easeOut});
-          const color = anyHighlight ? (v.vurgu ? theme.colors.yellow : '#5A6472') : theme.chart[i % theme.chart.length];
+          const color = anyHighlight ? (v.vurgu ? theme.colors.accent : '#5E5853') : theme.chart[i % theme.chart.length];
           return (
             <div key={i} style={{display: 'flex', alignItems: 'center', gap: 28, opacity: appear(frame, start - 6, 10)}}>
               <div style={{width: 340, flexShrink: 0, fontSize: 38, fontWeight: 600, color: theme.colors.text, textAlign: 'right'}}>{v.etiket}</div>

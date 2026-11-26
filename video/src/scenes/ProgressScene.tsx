@@ -17,7 +17,7 @@ export const ProgressScene: React.FC<{scene: T}> = ({scene}) => {
         {scene.kalemler.map((k, i) => {
           const start = 20 + i * 10;
           const p = interpolate(frame, [start, start + 45], [0, k.yuzde / 100], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: easeOut});
-          const color = k.yuzde >= 100 ? theme.colors.green : theme.colors.yellow;
+          const color = k.yuzde >= 100 ? theme.colors.green : theme.colors.accent;
           return (
             <div key={i} style={{display: 'flex', flexDirection: 'column', alignItems: 'center', ...riseIn(frame, start - 8)}}>
               <div style={{position: 'relative', width: 2 * r + 40, height: 2 * r + 40}}>

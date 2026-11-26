@@ -40,7 +40,7 @@ export const Caption: React.FC<{text: string | string[]}> = ({text}) => {
           padding: '18px 36px',
           borderRadius: 14,
           backgroundColor: 'rgba(10, 12, 15, 0.82)',
-          borderLeft: `6px solid ${theme.colors.yellow}`,
+          borderLeft: `6px solid ${theme.colors.accent}`,
           color: theme.colors.text,
           fontSize: theme.size.caption,
           fontWeight: 600,

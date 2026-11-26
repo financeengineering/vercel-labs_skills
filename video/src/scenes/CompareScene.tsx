@@ -26,7 +26,7 @@ export const CompareScene: React.FC<{scene: T}> = ({scene}) => (
     <SceneTitle>{scene.baslik}</SceneTitle>
     <div style={{display: 'flex', gap: 48, flex: 1}}>
       <Column title={scene.sol.baslik} items={scene.sol.maddeler} accent={theme.colors.concrete} start={16} />
-      <Column title={scene.sag.baslik} items={scene.sag.maddeler} accent={theme.colors.yellow} start={28} />
+      <Column title={scene.sag.baslik} items={scene.sag.maddeler} accent={theme.colors.accent} start={28} />
     </div>
   </SafeArea>
 );
