@@ -2,17 +2,22 @@
   "name": "insaat-video",
   "private": true,
   "version": "1.0.0",
-  "description": "Sessiz, metin ve grafik odaklı bilgilendirici videolar (Remotion)",
+  "description": "Sessiz, metin ve grafik odakl\u0131 bilgilendirici videolar (Remotion)",
   "scripts": {
     "studio": "remotion studio",
     "render": "remotion render InsaatVideo out/video.mp4",
     "render:test": "remotion render TestKlip out/test-klip.mp4",
     "still": "remotion still TestKlip out/kare.png --frame=90",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "render:v2": "remotion render AnimasyonluVideo out/animasyonlu.mp4"
   },
   "dependencies": {
     "@remotion/cli": "4.0.541",
     "@remotion/fonts": "4.0.541",
+    "@remotion/noise": "4.0.541",
+    "@remotion/paths": "4.0.541",
+    "@remotion/rough-notation": "4.0.541",
+    "@remotion/shapes": "4.0.541",
     "@remotion/transitions": "4.0.541",
     "react": "19.1.0",
     "react-dom": "19.1.0",

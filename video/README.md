@@ -69,3 +69,12 @@ npx skills add remotion-dev/skills
 
 Not: Remotion, 3 kişiden büyük şirketlerde ticari kullanım için lisans
 gerektirir (https://remotion.dev/license).
+
+## Animasyonlu sürüm (v2)
+
+`src/v2/` altında, metni en aza indirip anlatımı hareketle taşıyan ayrı bir
+kompozisyon var (`AnimasyonluVideo`, `npm run render:v2`): logo parlaması,
+çarpışan sayaçlar, kalemleri koparan şelale grafik, çizilen kablolar
+(`@remotion/paths`), düşen ekipman blokları, el çizimi vurgular
+(`@remotion/rough-notation`), gürültüyle hareket eden altın parçacıklar
+(`@remotion/noise`) ve sahne geçişlerinde altın ışık bandı.
